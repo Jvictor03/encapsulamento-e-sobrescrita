@@ -1,0 +1,27 @@
+class Carro:
+    def _init_(self, marca):
+        self._marca = marca
+    
+    @property
+    def marca(self):
+        return self._marca
+    
+    @marca.setter
+    def marca(self, nova_marca):
+        self._marca = nova_marca
+
+# Solicitando ao usuário digitar os valores para criação do objeto
+marca_carro = input("Digite a marca do carro: ")
+
+# Criando o objeto da classe Carro
+carro1 = Carro(marca_carro)
+
+# Exibindo os valores atributos do objeto criado
+print(f"Marca do carro: {carro1.marca}")
+
+# Alterando os atributos do objeto
+nova_marca_carro = input("Digite a nova marca do carro: ")
+carro1.marca = nova_marca_carro
+
+# Exibindo os valores atributos do objeto criado novamente
+print(f"Nova marca do carro: {carro1.marca}")
